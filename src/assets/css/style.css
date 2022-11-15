@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap');
+
+:root {
+    --primary: #6658dd;
+    --secondary: #BFD1DF;
+    --dark: #3a3f51;
+    --white: #FFFFFF;
+    --body: #959EAE;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    color: var(--body);
+}
+
+.box-shadow {
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(0, 0, 0, 0.05);
+}
+.transition {
+    -webkit-transition: all 0.5s 0s ease;
+    -moz-transition: all 0.5s 0s ease;
+    -o-transition: all 0.5s 0s ease;
+    transition: all 0.5s 0s ease;
+}
+/* BG Color variant */
+.bg-primary {
+    background: var(--primary) !important;
+}
+
+.bg-secondary {
+    background: var(--secondary) !important;
+}
+
+.bg-dark {
+    background: var(--dark) !important;
+}
+
+/* Text Color variant */
+.text-primary {
+    color: var(--primary) !important;
+}
+
+.text-secondary {
+    color: var(--secondary) !important;
+}
+
+.text-dark {
+    color: var(--dark) !important;
+}
+
+/* Font Family */
+.ff-inter {
+    font-family: 'Inter', sans-serif;
+}
+
+.ff-roboto {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Theme Header style here... */
+.theme-header {
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(0, 0, 0, 0.05);
+    position: fixed;
+    left: 0;
+    top: 0;
+    background:var(--white);
+    width: 100%;
+}
+
+.navbar-brand {
+    max-width: 70px;
+    width: 100%;
+    background: var(--dark);
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    padding-left: 24px;
+    -webkit-transition: all 0.5s 0s ease;
+    -moz-transition: all 0.5s 0s ease;
+    -o-transition: all 0.5s 0s ease;
+    transition: all 0.5s 0s ease;
+}
+
+
+
+.expand {
+    max-width: 270px !important;
+}
+
+.header-toggle {
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    position: absolute;
+    right: 0;
+    top: 56px;
+    border-radius: 0;
+    border: none;
+    box-shadow: 0 2px 7px rgb(0 0 0 / 5%), 0 2px 0px rgb(0 0 0 / 5%)
+}
+
+.dropdown-menu::before {
+    content: '';
+}
+
+.user-wrap {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    width: 100%;
+}
+
+/* Theme aside bar style here... */
+.theme-aside-bar {
+    max-width: 70px;
+    width: 100%;
+    min-height: calc(100vh - 70px);
+    padding: 24px 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    margin-top: 70px;
+    transition: all 0.5s 0s ease;
+}
+
+.nav-link {
+    color: var(--white);
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 12px 24px;
+    margin-bottom: 4px;
+}
+.nav-link:hover,
+.nav-link.active{
+    background: var(--primary);
+    color: var(--white) !important;
+}
+
+/* Main Content style here... */
+.main-content {
+    width: calc(100% - 318px);
+    margin-left: 294px;
+    margin-top: 86px;
+}
