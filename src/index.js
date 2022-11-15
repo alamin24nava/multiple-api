@@ -7,12 +7,17 @@ import { createBrowserRouter, RouterProvider, Route,} from "react-router-dom";
 
 import Countries from './pages/Countries/Index'
 import Todo from './pages/Todo/Index'
+import Home from './pages/Index'
 
 const router = createBrowserRouter([
 
     
     {
         path: "/",
+        element: <Home />,
+    },
+    {
+        path: "/countries",
         element: <Countries />,
     },
     {

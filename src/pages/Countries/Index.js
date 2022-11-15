@@ -1,13 +1,12 @@
 import React from 'react'
-import Aside from '../../layout/Aside'
-import Header from '../../layout/Header'
+
+import Layout from '../../layout/Index'
 
 export default function Index() {
   return (
-    <div>
-        <Header />
-        <Aside />
-        <div>Countries Page</div>
+    <div className='aa'>
+        <Layout />
+        <div className='main-content'>Countries Page</div>
     </div>
   )
 }

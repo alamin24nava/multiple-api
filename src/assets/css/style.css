@@ -2,7 +2,9 @@
 
 :root {
     --primary: #6658dd;
+    --danger: #EB6440;
     --secondary: #BFD1DF;
+    --success: #005874;
     --dark: #3a3f51;
     --white: #FFFFFF;
     --body: #959EAE;
@@ -24,6 +26,9 @@ body {
     -o-transition: all 0.5s 0s ease;
     transition: all 0.5s 0s ease;
 }
+.cursor-pointer{
+    cursor: pointer;
+}
 /* BG Color variant */
 .bg-primary {
     background: var(--primary) !important;
@@ -33,6 +38,9 @@ body {
     background: var(--secondary) !important;
 }
 
+.bg-danger {
+    background: var(--danger) !important;
+}
 .bg-dark {
     background: var(--dark) !important;
 }
@@ -46,6 +54,9 @@ body {
     color: var(--secondary) !important;
 }
 
+.text-danger {
+    color: var(--danger) !important;
+}
 .text-dark {
     color: var(--dark) !important;
 }
@@ -67,31 +78,32 @@ body {
     justify-content: space-between;
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(0, 0, 0, 0.05);
     position: fixed;
-    left: 0;
+    right: 0;
     top: 0;
     background:var(--white);
-    width: 100%;
-}
+    width: calc(100% - 70px);
+    transition: all 0.5s 0s ease;
 
+}
+.theme-header-expand{
+    width: calc(100% - 270px);
+}
 .navbar-brand {
-    max-width: 70px;
-    width: 100%;
-    background: var(--dark);
-    min-height: 70px;
     display: flex;
     align-items: center;
     padding-left: 24px;
-    -webkit-transition: all 0.5s 0s ease;
-    -moz-transition: all 0.5s 0s ease;
-    -o-transition: all 0.5s 0s ease;
     transition: all 0.5s 0s ease;
+    margin-bottom: 32px;
+    box-shadow: 0 2px 2px rgb(0 0 0 / 5%), 0 1px 0 rgb(0 0 0 / 5%);
+    padding-bottom: 18px;
 }
-
 
 
 .expand {
     max-width: 270px !important;
+    padding-left: 24px;
 }
+
 
 .header-toggle {
     cursor: pointer;
@@ -99,8 +111,9 @@ body {
 
 .dropdown-menu {
     position: absolute;
+    padding: 0;
     right: 0;
-    top: 56px;
+    top: 60px;
     border-radius: 0;
     border: none;
     box-shadow: 0 2px 7px rgb(0 0 0 / 5%), 0 2px 0px rgb(0 0 0 / 5%)
@@ -127,15 +140,14 @@ body {
 
 /* Theme aside bar style here... */
 .theme-aside-bar {
-    max-width: 70px;
+    max-width: 75px;
     width: 100%;
-    min-height: calc(100vh - 70px);
-    padding: 24px 0;
+    min-height: 100vh;
+    padding: 20px 0;
     position: fixed;
     left: 0;
     top: 0;
     z-index: 999;
-    margin-top: 70px;
     transition: all 0.5s 0s ease;
 }
 
@@ -145,13 +157,25 @@ body {
     display: flex;
     align-items: center;
     gap: 16px;
-    padding: 12px 24px;
+    padding: 16px 24px;
     margin-bottom: 4px;
+    line-height: 1;
+    transition: opacity 0.4s linear;  
+
+    
 }
 .nav-link:hover,
 .nav-link.active{
     background: var(--primary);
     color: var(--white) !important;
+}
+.hide-nav-txt{
+    transition: opacity 0.5s linear;  
+    opacity: 0; 
+}
+.show-nav-txt{
+    transition: opacity 0.4s linear;  
+    opacity: 1;
 }
 
 /* Main Content style here... */
