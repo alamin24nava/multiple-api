@@ -1,0 +1,117 @@
+
+/* Theme Header style here... */
+.theme-header {
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(0, 0, 0, 0.05);
+    position: fixed;
+    right: 0;
+    top: 0;
+    background:var(--bg-nav);
+    width: calc(100% - 70px);
+    transition: all 0.5s 0s ease;
+    z-index: 9;
+
+}
+.theme-header-expand{
+    width: calc(100% - 270px);
+}
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    padding-left: 24px;
+    transition: all 0.5s 0s ease;
+    margin-bottom: 32px;
+    box-shadow: 0 2px 2px rgb(0 0 0 / 5%), 0 1px 0 rgb(0 0 0 / 5%);
+    padding-bottom: 18px;
+}
+
+
+.expand {
+    max-width: 270px !important;
+    padding-left: 24px;
+}
+
+
+.header-toggle {
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    position: absolute;
+    padding: 0;
+    right: 0;
+    top: 60px;
+    border-radius: 0;
+    border: none;
+    box-shadow: 0 2px 7px rgb(0 0 0 / 5%), 0 2px 0px rgb(0 0 0 / 5%);
+    background: var(--bg-nav);
+}
+.dropdown-item{
+    color: var(--white);
+}
+.dropdown-menu::before {
+    content: '';
+}
+
+.user-wrap {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    width: 100%;
+}
+
+/* Theme aside bar style here... */
+.theme-aside-bar {
+    max-width: 75px;
+    width: 100%;
+    min-height: calc(100vh - 0px);
+    padding: 20px 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    transition: all 0.5s 0s ease;
+    background-color: var(--bg-nav);
+    box-shadow: 2px 2px 2px rgb(0 0 0 / 5%), 0 1px 0 rgb(0 0 0 / 5%);
+}
+
+.nav-link {
+    color: var(--nav-link);
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 24px;
+    margin-bottom: 4px;
+    line-height: 1;
+    transition: all 0.5s 0s ease;    
+}
+.nav-link:hover,
+.nav-link.active{
+    background: var(--primary);
+    color: var(--nav-link) !important;
+}
+.theme-light .nav-link:hover,
+.theme-light .nav-link.active{
+    background: var(--primary);
+    color: #ffff !important;
+}
+.hide-nav-txt{
+    transition: opacity 0.5s linear;  
+    opacity: 0; 
+}
+.show-nav-txt{
+    transition: opacity 0.4s linear;  
+    opacity: 1;
+}
