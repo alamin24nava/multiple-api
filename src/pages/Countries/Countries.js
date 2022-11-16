@@ -1,35 +1,23 @@
 import React, { useState, useEffect } from 'react'
+import './style.css'
+
+import ContentLoader from '../../components/ContentLoader/ContentLoader'
+import Empty from '../../components/Empty/Empty'
 import Country from './Country'
+import useFetch from '../../components/CustomHooks/useFetch'
 
-const loadingMsg = 'Loading...'
+const url = 'https://restcountries.com/v3.1/all'
 export default function Countries() {
-    const [countries, setCountries] = useState([])
-    const [isLoading, setIsLoading] = useState(true)
-
-    useEffect(() => {
-        setTimeout(() => {
-            fetch('https://restcountries.com/v3.1/all')
-                .then((res) => {
-                    return res.json()
-                })
-                .then((data) => {
-                    setIsLoading(loadingMsg)
-                    setCountries(data)
-                })
-                .catch((error) => {
-                    console.log(error.message)
-                })
-        }, 2000);
-    }, [])
-
-
+    const {data, isLoading, error} = useFetch(url)
+    const countriesEle = data &&
+        data.map((country) => (
+            <Country key={country.name.common} country={country}/>
+        ))
     return (
-        <div className="row">
-            {
-                countries.map((country) => (
-                    <Country country={country} loading={isLoading} />
-
-                ))}
+        <div className="row gx-3">
+            { isLoading && <ContentLoader />}
+            { error && <Empty/>}
+            {countriesEle}
         </div>
     )
 }

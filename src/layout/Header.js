@@ -37,7 +37,7 @@ export default function Header(props) {
                             <img src='http://flatfull.com/themes/angulr/html/img/a0.jpg' className='img-fluid rounded-circle'/>
                         </div>
                         <ul className={dropDown ? 'dropdown-menu show':'dropdown-menu'}>
-                            <li><a className="dropdown-item" href="#">Profile</a></li>
+                            <li><a className="dropdown-item" href="/profile">Profile</a></li>
                             <li><a className="dropdown-item" href="#">Setting</a></li>
                             <li><a className="dropdown-item" href="#">Plan</a></li>
                         </ul>

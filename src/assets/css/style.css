@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@400;500;700;900&display=swap');
 
 .theme-dark {
     --primary: #EB6440;
@@ -8,7 +8,9 @@
     --dark: #ffffff;
     --white:#ffffff;
     --body: #f2f3f9;
-    --bg-card: #0c1a32
+    --bg-card:#0c1a32;
+
+    --primary-hover:#6658dd;
 }
 .theme-light{
     --primary: #6658dd;
@@ -19,11 +21,13 @@
     --white:#15243e;
     --body: #15243e;
     --bg-card:#ffffff;
+
+    --primary-hover:#EB6440;
 }
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
     color: var(--body);
     background: var(--bg-body);
 }
@@ -67,9 +71,9 @@ h1, h2, h3, h4, h5, h6, p{
     background: var(--secondary) !important;
 }
 
-.bg-danger {
+/* .bg-danger {
     background: var(--danger) !important;
-}
+} */
 .bg-dark {
     background: var(--dark) !important;
 }
@@ -98,11 +102,18 @@ h1, h2, h3, h4, h5, h6, p{
 .ff-roboto {
     font-family: 'Roboto', sans-serif;
 }
+.ff-poppins {
+    font-family: 'Poppins', sans-serif;
+}
 
 /* Button style here.. */
 .btn-primary{
     background: var(--primary);
     border-color: var(--primary);
+}
+.btn-primary:hover{
+    background: var(--primary-hover);
+    border-color: var(--primary-hover);
 }
 /* Main Content style here... */
 .main-content {

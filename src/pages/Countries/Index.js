@@ -5,11 +5,11 @@ import Countries from './Countries'
 
 export default function Index() {
     return (
-        <div className='aa'>
-            <Layout />
+        <div>
             <div className='main-content'>
+            <Layout />
                 <div className='section-box'>
-                    <h4 className='title pb-0'>All Country Data</h4>
+                    <h4 className='title pb-0'>All Countries Data</h4>
                 </div>
                 <Countries />
             </div>

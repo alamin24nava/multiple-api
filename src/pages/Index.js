@@ -5,7 +5,7 @@ export default function Index() {
   return (
     <div>
         <Layout />
-        <div className='main-content'>Home page</div>
+        <div className='main-content'>Coming Soon</div>
     </div>
   )
 }
