@@ -8,9 +8,9 @@ export default function Index() {
     setExpand(expanded);
   }
   return (
-    <div>
+    <>
         <Header onExpand = {sideBarExpand} />
         <Aside expanded = {expand} />
-    </div>
+    </>
   )
 }

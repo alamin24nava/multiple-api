@@ -6,7 +6,7 @@ export default function Header(props) {
     const [dropDown, setDropDown] = useState(false)
     const [expand, setExpand] = useState(false)
     const [darkMode, setDarkMode] = useState(true)
-    const [theme, setTheme] = useState('theme-light')
+    const [theme, setTheme] = useState('theme-dark')
     const handleCollapse = ()=>{
         setExpand(!expand)
     }
